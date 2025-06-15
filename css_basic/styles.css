@@ -11,20 +11,59 @@ main {
   display: flex;
   flex-direction: row;
   flex: auto;
-  overflow: hidden; /* prevents child overflow */
+   /* prevents child overflow */
 }
 
 /* Make article take up 2/3 of the width */
 article {
-  flex: 2;
-  overflow-y: auto;
-  padding: 1rem;
+  background-color: #fefefe;
+  padding: 2em;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #333;
 }
+article h1, article h2, article h3 {
+  color: #2c3e50;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+table th {
+  background-color: #f0f0f0;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  align-items: center;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.logo {
+  font-size: 2em;
+  margin-right: 1em;
+}
+
 
 /* Make aside take up 1/3 of the width */
 aside {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 1rem;
 }
 
