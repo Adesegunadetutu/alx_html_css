@@ -162,6 +162,10 @@ section.testimonial p {
   justify-content: center;
   gap: 20px;
 }
+.tutorials-heading{
+  color: black ;
+  padding-bottom: 40px;
+}
 
 .tutorial-card {
   background-color: #f9f9f9;
@@ -220,7 +224,26 @@ section.testimonial p {
 
 .stars {
   margin-top: 10px;
-  color: #f0c040;
+  color: #C271FF;
+}
+.tutorials-h4{
+  color: #C271FF;
+}
+.stars-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
+.stars-gap {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  padding-left: 40px;
+}
 
+.tutorial-paragraph{
+  color: #666;
+  font-size: 14px;
+}
