@@ -317,4 +317,46 @@ section.testimonial p {
   color: #555;
   line-height: 1.5;
 }
+footer {
+  background-color: #071629;
+  color: #fff;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+footer section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer img {
+  height: 40px;
+}
+
+footer i {
+  color: #ccc;
+  margin-left: 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+footer i:hover {
+  color: #C271FF;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+  
+  padding-top: 10px;
+}
 
