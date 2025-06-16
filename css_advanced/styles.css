@@ -247,3 +247,42 @@ section.testimonial p {
   color: #666;
   font-size: 14px;
 }
+.membership-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.membership-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0;
+  padding: 40px;
+}
+
+.card {
+  flex: 1 1 calc(25% - 10px); /* 4 items on a row */
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.register-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
