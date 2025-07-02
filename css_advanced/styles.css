@@ -1,0 +1,673 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white; /* Default text color for the body */
+  /* Replaced 'background: #000;' with the image background */
+  background: url("background-image.png") center center / cover no-repeat;
+  min-height: 100vh; /* Ensures the background covers the full viewport height */
+}
+
+/* Hero Section */
+.hero {
+  /* Removed 'background: url("background-image.png") center center / cover no-repeat;' */
+  height: 100vh; /* Still ensures the hero section takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* This centers hero content horizontally */
+  text-align: center;
+  padding: 2rem;
+  /* color: white; - This is now redundant if body color is white, but harmless */
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Navigation */
+.nav {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+}
+
+/* MODIFIED: Link colors in navigation */
+.nav a {
+  color: white; /* Changed COURSES, PRICING, LOGIN to white */
+  text-decoration: none; /* Removed underline */
+}
+
+.nav a:hover {
+  color: #c271ff; /* Optional: Hover effect for navigation links */
+}
+
+/* Main Heading */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Sub-links (smiles, grin, laugh) */
+.hero .sub-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Button */
+.hero .cta {
+  padding: 0.8rem 2rem;
+  background: #c271ff;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero .cta:hover {
+  background: #a653e7;
+}
+
+/* NEW: Container for subsequent content (Learn from the pros and Testimonials) */
+.content-section {
+  max-width: 960px; /* Adjust this width as needed for your content */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 2rem; /* Adds padding around the content within this section */
+  text-align: center; /* Centers inline content and text within this section */
+}
+
+/* Learn From the Pros */
+.section-title {
+  margin-top: 4rem; /* Spacing from the hero section */
+  font-size: 1.5rem;
+  color: #c271ff;
+  /* text-align: center; is now handled by .content-section */
+}
+
+/* Testimonials */
+.testimonials {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center; /* Centers the flex items (testimonial cards) */
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* padding: 2rem; is now handled by .content-section */
+}
+
+.testimonial {
+  text-align: center;
+  max-width: 200px;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial p {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+
+/* CSS for Testimonial Quote Section */
+
+.testimonial-quote-section {
+  background-color: #9B59B6; /* The purple background color */
+  padding: 4rem 2rem; /* Add generous padding top/bottom and some side padding */
+  display: flex; /* Use flexbox to center its content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if container allows (important for single line) */
+  min-height: 300px; /* Give it a minimum height, adjust as needed */
+  color: white; /* Default text color for this section */
+  margin-top: 4rem; /* Add some space above this section, similar to .section-title */
+}
+
+.testimonial-container {
+  display: flex; /* Arrange image and content side-by-side */
+  align-items: center; /* Vertically align items in the middle */
+  gap: 2rem; /* Space between the image and the text content */
+  max-width: 800px; /* Limit the width of the testimonial for readability */
+  width: 100%; /* Ensure it takes full width up to max-width */
+  padding: 0 1rem; /* Add some padding on the sides for smaller screens */
+}
+
+.reviewer-image img {
+  width: 150px; /* Set a fixed width for the image */
+  height: 150px; /* Set a fixed height for the image */
+  border-radius: 50%; /* Makes the image perfectly circular */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border: 2px solid white; /* Optional: A small white border around the image */
+}
+
+.review-content {
+  flex-grow: 1; /* Allows the content to take up remaining space */
+  text-align: left; /* Align text to the left */
+}
+
+.review-content .quote {
+  font-size: 1.25rem; /* Larger font size for the quote */
+  line-height: 1.6; /* Improve readability of the quote */
+  margin-bottom: 1rem; /* Space below the quote */
+  font-weight: 300; /* Lighter font weight for the quote, if desired */
+}
+
+.review-content .reviewer-name {
+  font-size: 1.1rem; /* Font size for the name */
+  font-weight: bold; /* Bold the name */
+  margin-bottom: 0.25rem; /* Small space below the name */
+  color: white; /* Ensure name is white */
+}
+
+.review-content .reviewer-title {
+  font-size: 0.9rem; /* Smaller font size for the title */
+  opacity: 0.8; /* Make the title slightly transparent */
+  color: white; /* Ensure title is white */
+  font-style: italic; /* Optional: Make the title italic */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column; /* Stack image and content vertically */
+    text-align: center; /* Center text when stacked */
+    gap: 1rem; /* Reduce gap when stacked */
+  }
+
+  .reviewer-image {
+    margin-bottom: 1rem; /* Add space below image when stacked */
+  }
+
+  .review-content {
+    text-align: center; /* Center content when stacked */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-quote-section {
+    padding: 2rem 1rem; /* Reduce padding on very small screens */
+  }
+  .reviewer-image img {
+    width: 100px; /* Smaller image on very small screens */
+    height: 100px;
+  }
+  .review-content .quote {
+    font-size: 1rem; /* Adjust quote font size */
+  }
+}
+
+
+/* --- Popular Tutorials Section --- */
+
+.popular-tutorials-section {
+  background-color: white; /* The white background for this section */
+  padding: 4rem 2rem; /* Vertical and horizontal padding */
+  text-align: center; /* Center the heading */
+  color: #000; /* Default text color for this section (black) */
+}
+
+.popular-tutorials-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem; /* Space below the title */
+  color: #000; /* Ensure the main title is black */
+}
+
+.popular-tutorials-title .purple-text {
+  color: #c271ff; /* The purple color for "popular" */
+}
+
+.tutorials-grid {
+  display: grid;
+  /* For larger screens: 4 columns, equal width, with gap */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* Space between cards */
+  max-width: 1200px; /* Limit overall grid width */
+  margin: 0 auto; /* Center the grid on the page */
+}
+
+.tutorial-card {
+  background-color: white; /* Ensure card background is white, though section is white */
+  text-align: left; /* Align text within the card to the left */
+  border-radius: 5px; /* Slightly rounded corners for cards */
+  overflow: hidden; /* Ensures nothing overflows, especially images */
+  /* You might add a subtle box-shadow here if desired for depth */
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+}
+
+.thumbnail-container {
+  position: relative; /* Essential for positioning the play icon */
+  width: 100%;
+  padding-bottom: 75%; /* 4:3 aspect ratio (height / width * 100%). Adjust as needed */
+  height: 0; /* Ensures padding-bottom defines height */
+  overflow: hidden;
+}
+
+.thumbnail-container img:first-child { /* The tutorial thumbnail image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the container */
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the icon precisely */
+  width: 60px; /* Size of the play button, adjust as needed */
+  height: 60px;
+  cursor: pointer;
+  /* You might want a slightly transparent background or different color for the play icon */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* border-radius: 50%; */
+}
+
+.tutorial-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 1rem 0.5rem 1rem; /* Top, right, bottom, left margins */
+  color: #000; /* Black for heading */
+}
+
+.tutorial-card .description {
+  font-size: 0.9rem;
+  color: #555; /* Slightly lighter gray for description */
+  margin: 0 1rem 1rem 1rem;
+  line-height: 1.5;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  margin: 1rem 1rem 0.5rem 1rem; /* Space above and below */
+}
+
+.author-avatar {
+  width: 30px; /* Size of the author's small image */
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem; /* Space between avatar and name */
+}
+
+.author-name {
+  font-size: 0.9rem;
+  color: #c271ff; /* Purple color for author name */
+  font-weight: bold;
+}
+
+.rating-and-duration {
+  display: flex;
+  justify-content: space-between; /* Pushes stars to left, duration to right */
+  align-items: center;
+  margin: 0.5rem 1rem 1rem 1rem; /* Margin for bottom section */
+}
+
+.stars {
+  color: #c271ff; /* Purple color for the stars */
+  font-size: 0.9rem;
+}
+
+.stars .fa-regular.fa-star {
+    color: #ccc; /* Lighter color for empty stars */
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: #999; /* Lighter color for duration text */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .tutorials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-tutorials-section {
+    padding: 3rem 1rem; /* Less padding on smaller screens */
+  }
+  .popular-tutorials-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .tutorials-grid {
+    grid-template-columns: 1fr; /* Stack cards on top of each other */
+    max-width: 300px; /* Optional: limit width of single column cards */
+    margin: 0 auto;
+  }
+  .tutorial-card {
+    margin-bottom: 1.5rem; /* Add space between stacked cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-tutorials-title {
+    font-size: 1.5rem;
+  }
+  .tutorial-card h3 {
+    font-size: 1.1rem;
+  }
+  .tutorial-card .description {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+/* --- Free Membership Section --- */
+
+.free-membership-section {
+  background-color: #28283E; /* Dark background color for the section */
+  padding: 4rem 2rem; /* Ample padding for spacing */
+  text-align: center; /* Center the title and button */
+  color: white; /* Default text color for this section */
+}
+
+.membership-title {
+  font-size: 2.5rem; /* Larger font size for the main title */
+  font-weight: 700;
+  color: #c271ff; /* Purple color for "Free membership" */
+  margin-bottom: 3rem; /* Space below the title */
+}
+
+.membership-features-grid {
+  display: grid;
+  /* For larger screens: 4 columns, responsive */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem; /* Space between feature items */
+  max-width: 1000px; /* Limit the width of the grid */
+  margin: 0 auto 3rem auto; /* Center the grid, add space below before the button */
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content within each feature item */
+  text-align: center; /* Ensure text is centered */
+  padding: 1rem; /* Some internal padding if needed */
+}
+
+.smiley-icon {
+  width: 80px; /* Size of the smiley icon */
+  height: 80px;
+  margin-bottom: 1.5rem; /* Space below the icon */
+  /* You might want to apply a filter if the icon itself isn't purple */
+  /* filter: invert(39%) sepia(80%) saturate(1637%) hue-rotate(240deg) brightness(90%) contrast(100%); */
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Space below the feature title */
+  color: white; /* Ensure feature title is white */
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc; /* Slightly lighter white/gray for description */
+}
+
+/* Reusing .cta from your existing CSS for the button */
+.membership-cta {
+  /* No specific styles needed here unless different from existing .cta */
+  /* You might want to adjust its margin-top if the grid's margin-bottom isn't enough */
+  margin-top: 2rem; /* Example adjustment */
+}
+
+
+/* Button in the Free Membership section */
+.free-membership-section .membership-cta {
+  background: #c271ff; /* Set the purple background color for the button */
+  border: none; /* Remove default button border */
+  border-radius: 25px; /* Make it rounded */
+  color: white; /* Text color */
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.8rem 2rem; /* Padding inside the button */
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth transition on hover */
+}
+
+.free-membership-section .membership-cta:hover {
+  background: #a653e7; /* Darker purple on hover */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .membership-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for slightly fewer columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .free-membership-section {
+    padding: 3rem 1rem; /* Less padding on smaller screens */
+  }
+  .membership-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .membership-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust columns for smaller screens */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .membership-features-grid {
+    grid-template-columns: 1fr; /* Stack items in a single column on very small screens */
+    max-width: 300px; /* Limit width of stacked items */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .smiley-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .feature-item h3 {
+    font-size: 1.1rem;
+  }
+  .feature-item p {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+/* --- F.A.Q. Section --- */
+
+.faq-section {
+  background-color: white; /* White background for the FAQ section */
+  padding: 4rem 2rem; /* Ample padding around the section */
+  text-align: center; /* Center the main F.A.Q. title */
+  color: #000; /* Default text color for this section (black) */
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000; /* Black color for the F.A.Q. title */
+  margin-bottom: 3rem; /* Space below the title */
+}
+
+.faq-content-grid {
+  display: grid;
+  /* Two columns for larger screens, equal width */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem; /* Space between the two main columns */
+  max-width: 1000px; /* Limit the overall width of the content */
+  margin: 0 auto; /* Center the grid horizontally */
+  text-align: left; /* Reset text alignment for the content within the grid */
+}
+
+.faq-column {
+  display: flex;
+  flex-direction: column; /* Stack FAQ items vertically within each column */
+  gap: 2.5rem; /* Space between individual FAQ items within a column */
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem; /* Space below the question */
+  color: #000; /* Black color for questions */
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555; /* Slightly lighter gray for answers */
+}
+
+/* --- Responsive Adjustments for F.A.Q. Section --- */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 3rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+  .faq-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .faq-content-grid {
+    grid-template-columns: 1fr; /* Stack columns on top of each other on smaller screens */
+    gap: 2rem; /* Adjust gap when stacked */
+  }
+  .faq-column {
+    gap: 2rem; /* Adjust gap between items in stacked column */
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-item h3 {
+    font-size: 1.1rem;
+  }
+  .faq-item p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* --- Footer Section --- */
+
+.main-footer {
+  background-color: #1a1a2e; /* Dark background color for the footer */
+  color: white; /* Default text color for the footer */
+  padding: 2rem 2rem 1rem 2rem; /* Top, right, bottom, left padding */
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between; /* Pushes logo to left, social icons to right */
+  align-items: center; /* Vertically align items */
+  max-width: 1200px; /* Limit the width of content, adjust as needed */
+  margin: 0 auto 1.5rem auto; /* Center top content, add space below */
+  padding-bottom: 1.5rem; /* Add padding at the bottom of the top section */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator line */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between smiley icon and text */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-smiley-icon {
+  width: 30px; /* Size of the smiley icon */
+  height: 30px;
+  /* If your smiley-icon.png is not white, you might need a filter */
+  /* filter: brightness(0) invert(1); */ /* This will turn a black icon white */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem; /* Space between social icons */
+}
+
+.social-icons a {
+  color: white; /* White color for icons */
+  font-size: 1.5rem; /* Size of the social icons */
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.social-icons a:hover {
+  color: #c271ff; /* Purple hover effect */
+}
+
+.footer-bottom {
+  text-align: center; /* Center the copyright text */
+  margin-top: 1rem; /* Space above copyright */
+  opacity: 0.7; /* Make copyright text slightly subtle */
+}
+
+/* --- Responsive Adjustments for Footer --- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Stack logo and social icons vertically */
+    gap: 1.5rem; /* Adjust gap when stacked */
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-logo {
+    margin-bottom: 0.5rem; /* Space below logo when stacked */
+  }
+  .social-icons {
+    margin-top: 0.5rem; /* Space above social icons when stacked */
+  }
+  .main-footer {
+    padding: 1.5rem 1rem 0.75rem 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 1rem;
+  }
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+  .main-footer p {
+    font-size: 0.8rem;
+  }
+}
