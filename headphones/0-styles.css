@@ -1,0 +1,136 @@
+/* ===== Reset Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Variables ===== */
+:root {
+  --primary-color: #ff6565;
+  --text-color: #fff;
+  --background: linear-gradient(to bottom, #1e2a38, #000);
+  --max-width: 1000px;
+}
+
+/* ===== Base Styles ===== */
+body {
+    background-image: url("images/headphones_hero_1.jpg");
+     background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.navbar {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--primary-color);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+.paragraph{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: #fff;
+  }
+
+  .paragraph2{
+    margin-bottom: 50px;
+    color: #fff;
+  }
+
+
+.hero-description {
+  margin-top: 100px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 50px;
+  }
+
+  
+}
